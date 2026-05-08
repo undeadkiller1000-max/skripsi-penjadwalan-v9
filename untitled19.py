@@ -87,7 +87,6 @@ def load_order_file(uploaded_file):
         raise ValueError(f"Kolom wajib tidak ditemukan: {missing}")
 
     df = df[REQUIRED_COLUMNS].copy()
-    df = df.dropna(how='all')
     df['id pesanan']   = df['id pesanan'].astype(str).str.strip()
     df['jenis produk'] = df['jenis produk'].astype(str).str.strip().str.lower()
 
